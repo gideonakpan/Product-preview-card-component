@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
+}
+h1, h2 {
+    font-weight: 700;
+}
+p {
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+}
+main {
+    max-width: 600px; 
+    display: flex;
+    flex-direction: row;
+}  
+main > section {
+    flex: 50%;
+} 
+.img__box img.desktop{
+    width: 100%;
+    border-radius: 15px 0 0 15px;
+}
+.img__box img.mobile{
+    display: none;
+}
+.content {
+    background: hsl(0, 0%, 100%);
+    padding: 30px;
+    border-radius: 0 15px 15px 0;
+}
+.content .sub__title{
+    letter-spacing: 8px;
+    margin-bottom: 5px;
+}
+.content h1 {
+    font-size: 23px;
+    font-family: "Fraunces", serif;
+    color: hsl(212, 21%, 14%);
+    margin-top: 30px;
+}
+.break_resp {
+    display: none;
+}
+.content .para {
+    margin: 35px 0;
+}
+.content h2 {
+    font-size: 23px;
+    font-family: "Fraunces", serif;
+    color: hsl(158, 36%, 37%);
+}
+.content .price {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 18px;
+}
+.content .price .cancel__price {
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+    margin-top: 5px;
+    text-decoration: line-through;
+}
+.content .price__link {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    background: hsl(158, 36%, 37%);
+    border-radius: 5px;
+    padding: 8px;
+}
+.content .price__link:hover {
+    background: hsl(158, 95%, 8%);
+}
+.content .price__link span{
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+}
+
+/* =========================== MEDIA QUERIES(MEDIUM DEVICES)==============================*/
+@media screen and (max-width: 1024px) {
+    
+}
+
+
+/* =========================== MEDIA QUERIES(SMALL DEVICES)==============================*/
+@media screen and (max-width: 600px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+    main {
+        flex-direction: column;
+        gap: 0;
+        max-width: 90%;
+        height: 90vh;
+    }
+    .img__box {
+        flex: 40%;
+    } 
+    .img__box img{
+        border-radius: none;
+    }
+    .content {
+        flex: 60%;
+        border-radius: 0;
+    }
+    .content .para {
+        margin: 25px 0;
+    }
+    .break {
+        display: none;
+    }
+    .break_resp {
+        display: block;
+    }
+    .content .price {
+        margin-top: 10px;
+    }
+    .content .price .cancel__price {
+        margin-top: 15px;
+    }
+    .img__box img.desktop{
+        display: none;
+    }
+    .img__box img.mobile{
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    
+}
